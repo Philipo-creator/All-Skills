@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="AllSkills - Discover, learn and develop practical skills with structured learning roadmaps.">
+  <title>AllSkills | Home</title>
+  <link rel="icon" href="img/Skills.png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/public.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="head">
+      <a href="index.html" class="logo">
+        <img src="img/Skills.png" alt="AllSkills logo"><strong>A</strong>ll<strong>S</strong>kills
+      </a>
+      <a href="auth/signup.html" class="btn btn-primary">Get Started</a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="current">Home</a>
+      <a href="skills.html">Explore Skills</a>
+      <a href="about.html">About Us</a>
+      <a href="articles.html">Articles</a>
+      <a href="contact.html">Contact</a>
+      <a href="auth/login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="hero" id="top">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="Vid/1.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <h1>ONE PLATFORM. ENDLESS SKILLS. UNLIMITED POSSIBILITIES.</h1>
+        <p>
+          Discover new interests, develop practical abilities and build the
+          skills you need to move forward. Explore structured learning
+          roadmaps designed to take you from beginner to advanced.
+        </p>
+        <div class="hero-buttons">
+          <a href="skills.html" class="btn btn-light">Explore Skills</a>
+          <a href="auth/signup.html" class="btn btn-primary">Get Started for Free</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. INTRODUCTION -->
+    <section class="section intro">
+      <h2>Welcome to AllSkills</h2>
+      <p class="section-sub">
+        A skill discovery and structured learning platform. Find a skill,
+        follow a clear roadmap and track your progress step by step.
+      </p>
+      <div class="card-grid three">
+        <div class="card">
+          <h3>Discover Skills</h3>
+          <p>Browse skills across technology, design, business, finance and more, and see what it takes to learn each one.</p>
+        </div>
+        <div class="card">
+          <h3>Follow Roadmaps</h3>
+          <p>Every skill has a step-by-step roadmap, so you always know what to learn next.</p>
+        </div>
+        <div class="card">
+          <h3>Track Your Progress</h3>
+          <p>Save your progress, continue where you stopped and develop several skills at the same time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. EXPLORE CATEGORIES -->
+    <section class="section">
+      <h2>Explore Categories</h2>
+      <p class="section-sub">There is always something new to discover.</p>
+
+      <!-- JS LATER: these cards can be generated from the skills data file -->
+      <div class="card-grid four" id="category-list">
+        <a href="skills.html?category=technology" class="card category">
+          <h3>Technology</h3>
+          <p>Web Development, Software Engineering</p>
+        </a>
+        <a href="skills.html?category=design" class="card category">
+          <h3>Design</h3>
+          <p>Graphic Design, UI/UX Design</p>
+        </a>
+        <a href="skills.html?category=business" class="card category">
+          <h3>Business</h3>
+          <p>Entrepreneurship, Marketing</p>
+        </a>
+        <a href="skills.html?category=finance" class="card category">
+          <h3>Finance</h3>
+          <p>Financial Literacy, Accounting</p>
+        </a>
+        <a href="skills.html?category=media" class="card category">
+          <h3>Media</h3>
+          <p>Photography, Video Editing</p>
+        </a>
+        <a href="skills.html?category=communication" class="card category">
+          <h3>Communication</h3>
+          <p>Public Speaking, Writing</p>
+        </a>
+        <a href="skills.html?category=professional" class="card category">
+          <h3>Professional</h3>
+          <p>Project Management, Leadership</p>
+        </a>
+        <a href="skills.html?category=practical" class="card category">
+          <h3>Practical</h3>
+          <p>Tailoring, Electrical Skills</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 4. POPULAR SKILLS -->
+    <section class="section">
+      <h2>Popular Skills</h2>
+      <p class="section-sub">Start with a skill other learners are choosing. Durations are estimates, not promises.</p>
+
+      <!-- JS LATER: fill this list from the skills data file -->
+      <div class="card-grid five" id="popular-skills">
+
+        <a href="skill.html?id=html-css" class="card skill-card">
+          <div class="skill-top">
+            <span class="skill-cat">Technology</span>
+            <span class="badge badge-free">FREE</span>
+          </div>
+          <h3>HTML &amp; CSS</h3>
+          <p class="skill-meta">Beginner &bull; 4-6 weeks</p>
+        </a>
+
+        <a href="skill.html?id=graphic-design" class="card skill-card">
+          <div class="skill-top">
+            <span class="skill-cat">Design</span>
+            <span class="badge badge-pro">PRO</span>
+          </div>
+          <h3>Graphic Design</h3>
+          <p class="skill-meta">Beginner &bull; 8 weeks</p>
+        </a>
+
+        <a href="skill.html?id=ui-ux-design" class="card skill-card">
+          <div class="skill-top">
+            <span class="skill-cat">Design</span>
+            <span class="badge badge-pro">PRO</span>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p class="skill-meta">Beginner &bull; 10 weeks</p>
+        </a>
+
+        <a href="skill.html?id=javascript" class="card skill-card">
+          <div class="skill-top">
+            <span class="skill-cat">Technology</span>
+            <span class="badge badge-pro">PRO</span>
+          </div>
+          <h3>JavaScript</h3>
+          <p class="skill-meta">Intermediate &bull; 12 weeks</p>
+        </a>
+
+        <a href="skill.html?id=digital-marketing" class="card skill-card">
+          <div class="skill-top">
+            <span class="skill-cat">Business</span>
+            <span class="badge badge-pro">PRO</span>
+          </div>
+          <h3>Digital Marketing</h3>
+          <p class="skill-meta">Beginner &bull; 6 weeks</p>
+        </a>
+
+      </div>
+
+      <p class="center-link"><a href="skills.html" class="btn btn-primary">See All Skills</a></p>
+    </section>
+
+    <!-- 5. HOW IT WORKS -->
+    <section class="section">
+      <h2>How It Works</h2>
+      <p class="section-sub">From curious to capable in four steps.</p>
+      <div class="card-grid four">
+        <div class="card step">
+          <span class="step-no">01</span>
+          <h3>Discover</h3>
+          <p>Explore the full skills library. No account needed.</p>
+        </div>
+        <div class="card step">
+          <span class="step-no">02</span>
+          <h3>View the Roadmap</h3>
+          <p>See every step of a skill before you begin.</p>
+        </div>
+        <div class="card step">
+          <span class="step-no">03</span>
+          <h3>Start Learning</h3>
+          <p>Open a free lesson and sign up when you want to save progress.</p>
+        </div>
+        <div class="card step">
+          <span class="step-no">04</span>
+          <h3>Grow</h3>
+          <p>Track progress, add more skills and unlock Pro to go further.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FREE VS PRO -->
+    <section class="section">
+      <h2>Free vs Pro</h2>
+      <p class="section-sub">Free lets you begin. Pro lets you go further.</p>
+
+      <div class="plans">
+        <div class="plan">
+          <h3>AllSkills Free</h3>
+          <p class="price">$0</p>
+          <p class="plan-text">For discovering skills and starting your learning journey.</p>
+          <ul>
+            <li>Browse the entire skills library</li>
+            <li>View every skill roadmap</li>
+            <li>Introductory lessons</li>
+            <li>Personal dashboard</li>
+            <li>Progress tracking</li>
+            <li>Save skills for later</li>
+          </ul>
+          <a href="auth/signup.html" class="btn btn-primary">Get Started for Free</a>
+        </div>
+
+        <div class="plan featured">
+          <span class="plan-tag">MOST COMPLETE</span>
+          <h3>AllSkills Pro</h3>
+          <p class="price">$10<small>/month</small></p>
+          <p class="plan-text">For complete access to learning roadmaps, advanced lessons and extra features.</p>
+          <ul>
+            <li>Everything in Free</li>
+            <li>Complete learning paths</li>
+            <li>Advanced lessons</li>
+            <li>Practical assignments</li>
+            <li>Downloadable materials</li>
+            <li>Advanced progress analytics</li>
+          </ul>
+          <a href="pro/pricing.html" class="btn btn-light">See Pro Details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. WHY ALLSKILLS -->
+    <section class="section">
+      <h2>Why AllSkills?</h2>
+      <p class="section-sub">
+        Learning should be accessible, structured and continuous.
+      </p>
+      <div class="card-grid three">
+        <div class="card">
+          <h3>Built to Grow</h3>
+          <p>One reusable system means new skills can be added without redesigning the platform.</p>
+        </div>
+        <div class="card">
+          <h3>Clear Direction</h3>
+          <p>Roadmaps remove the guesswork. You always see where you are and what comes next.</p>
+        </div>
+        <div class="card">
+          <h3>Start Free</h3>
+          <p>Explore everything, try real lessons and decide later whether Pro is for you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. TESTIMONIALS -->
+    <section class="section">
+      <h2>Learner Stories</h2>
+      <p class="section-sub">Real experiences from real learners.</p>
+
+      <!-- JS LATER: show real testimonials here once you have them.
+           Do not publish invented reviews. -->
+      <div class="empty-box" id="testimonial-list">
+        <h3>Be the first to share your story</h3>
+        <p>Learner experiences will appear here once people start learning on AllSkills.</p>
+      </div>
+    </section>
+
+    <!-- 9. FINAL CALL TO ACTION -->
+    <section class="final-cta">
+      <h2>Your Journey Starts Here.</h2>
+      <p>
+        Every new skill creates another opportunity. Explore the library,
+        pick your first skill and take the next step towards your goals.
+      </p>
+      <a href="skills.html" class="btn btn-light">Explore Skills</a>
+    </section>
+
+  </main>
+
+  <!-- 10. FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>AllSkills</h3>
+        <p>One platform. Endless skills. Discover, learn and develop practical skills with structured roadmaps.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="skills.html">Explore Skills</a>
+        <a href="articles.html">Articles</a>
+        <a href="pro/pricing.html">AllSkills Pro</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth/login.html">Login</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:info@allskills.com">info@allskills.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+      <a href="#top" class="back-top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- JS LATER:
+  <script src="js/main.js"></script>
+  <script src="js/skills.js"></script> -->
+
+</body>
+</html>

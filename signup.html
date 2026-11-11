@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Create your free AllSkills account.">
+  <title>AllSkills | Sign Up</title>
+  <link rel="icon" href="../img/Skills.png">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/auth.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="app-header">
+    <a href="../index.html" class="brand">
+      <img src="../img/Skills.png" alt="AllSkills logo">
+      <span>AllSkills</span>
+    </a>
+    <a href="../skills.html" class="header-link">Explore Skills</a>
+  </header>
+
+  <main class="auth-wrap">
+    <section class="auth-card">
+      <h1>Create Your Free Account</h1>
+      <p class="auth-sub">Save your progress and start learning. No payment needed.</p>
+
+      <!-- JS LATER: validate the fields, then send them to the back end.
+           For now this form simply opens the dashboard. -->
+      <form id="signup-form" action="../learner/dashboard.html" method="get">
+
+        <div class="field">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="At least 8 characters" minlength="8" required>
+          <!-- JS LATER: "Show password" toggle -->
+        </div>
+
+        <label class="check-line">
+          <input type="checkbox" name="agree" required>
+          <span>I agree to the <a href="../terms.html">Terms of Service</a> and <a href="../privacy.html">Privacy Policy</a>.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary full">Create Account</button>
+      </form>
+
+      <!-- JS LATER / BACK END LATER: "Continue with Google" button goes here -->
+
+      <p class="auth-switch">
+        Already have an account? <a href="login.html">Log in</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

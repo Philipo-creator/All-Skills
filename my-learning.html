@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="The skills you are currently learning on AllSkills.">
+  <title>AllSkills | My Learning</title>
+  <link rel="icon" href="../img/Skills.png">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+
+<div class="dashboard">
+
+  <aside class="sidebar">
+    <div class="side-head">
+      <img src="../img/Skills.png" alt="AllSkills logo">
+      <h2>AllSkills</h2>
+    </div>
+
+    <div class="side-profile">
+      <div class="avatar" id="user-initial">U</div>
+      <div>
+        <strong id="user-name">Your Name</strong>
+        <small id="user-plan">Free plan</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="dashboard.html"><span>⌂</span><b>Overview</b></a>
+      <a href="../skills.html"><span>✧</span><b>Explore Skills</b></a>
+      <a href="my-learning.html" class="active-link"><span>▤</span><b>My Learning</b></a>
+      <a href="progress.html"><span>▥</span><b>My Progress</b></a>
+      <a href="saved.html"><span>☆</span><b>Saved Skills</b></a>
+      <a href="profile.html"><span>♙</span><b>Profile</b></a>
+    </nav>
+
+    <div class="side-bottom">
+      <a href="../index.html"><span>↪</span><b>Sign Out</b></a>
+    </div>
+  </aside>
+
+  <label for="menu-toggle" class="sidebar-overlay"></label>
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <div class="top-left">
+        <label for="menu-toggle" class="top-menu">☰</label>
+        <h2>My Learning</h2>
+      </div>
+      <a href="../skills.html" class="btn btn-primary">Add a Skill</a>
+    </header>
+
+    <div class="content">
+
+      <div class="page-head">
+        <h1>My Learning</h1>
+        <p>The skills you are currently developing. You can learn more than one at the same time.</p>
+      </div>
+
+      <!-- JS LATER: build these cards from the learner's added skills.
+           SAMPLE CONTENT below. -->
+      <section class="block">
+        <div class="grid-3" id="my-skills">
+
+          <div class="card">
+            <div class="card-top"><span class="small-label">Design</span><span class="badge badge-pro">PRO</span></div>
+            <h3>Graphic Design</h3>
+            <p>Step 3 of 10: Typography</p>
+            <div class="progress-info"><span>Progress</span><span>35%</span></div>
+            <div class="progress-bar"><div style="width:35%"></div></div>
+            <a href="learn.html?skill=graphic-design&amp;step=3" class="card-link">Continue</a>
+          </div>
+
+          <div class="card">
+            <div class="card-top"><span class="small-label">Technology</span><span class="badge badge-free">FREE</span></div>
+            <h3>HTML &amp; CSS</h3>
+            <p>Step 6 of 10: Making Pages Responsive</p>
+            <div class="progress-info"><span>Progress</span><span>60%</span></div>
+            <div class="progress-bar"><div style="width:60%"></div></div>
+            <a href="learn.html?skill=html-css&amp;step=6" class="card-link">Continue</a>
+          </div>
+
+          <div class="card">
+            <div class="card-top"><span class="small-label">Business</span><span class="badge badge-pro">PRO</span></div>
+            <h3>Digital Marketing</h3>
+            <p>Step 1 of 8: Introduction</p>
+            <div class="progress-info"><span>Progress</span><span>10%</span></div>
+            <div class="progress-bar"><div style="width:10%"></div></div>
+            <a href="learn.html?skill=digital-marketing&amp;step=1" class="card-link">Continue</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Empty state: JS LATER shows this when the learner has no skills yet -->
+      <section class="block">
+        <div class="empty-state" id="no-skills" hidden>
+          <span class="empty-icon">▤</span>
+          <h3>You are not learning any skills yet</h3>
+          <p>Browse the library, open a roadmap and add a skill to start learning.</p>
+          <a href="../skills.html" class="btn btn-primary">Explore Skills</a>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="dashboard-footer">
+      <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>

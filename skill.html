@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="View the full learning roadmap for this skill on AllSkills.">
+  <title>AllSkills | Skill Roadmap</title>
+  <link rel="icon" href="img/Skills.png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/public.css">
+  <link rel="stylesheet" href="styles/skill.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="head">
+      <a href="index.html" class="logo">
+        <img src="img/Skills.png" alt="AllSkills logo"><strong>A</strong>ll<strong>S</strong>kills
+      </a>
+      <a href="auth/signup.html" class="btn btn-primary">Get Started</a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="skills.html" class="current">Explore Skills</a>
+      <a href="about.html">About Us</a>
+      <a href="articles.html">Articles</a>
+      <a href="contact.html">Contact</a>
+      <a href="auth/login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="page-wrap" id="top">
+
+    <!-- BREADCRUMB -->
+    <p class="breadcrumb">
+      <a href="index.html">Home</a> &rsaquo;
+      <a href="skills.html">Explore Skills</a> &rsaquo;
+      <span id="crumb-skill">Graphic Design</span>
+    </p>
+
+    <!-- SKILL HEADER -->
+    <!-- JS LATER: every id below is filled from js/skills.js
+         using the id in the address, for example ?id=graphic-design.
+         The text shown now is sample content only. -->
+    <section class="skill-header">
+      <div class="skill-header-text">
+        <span class="tag" id="skill-category">Design</span>
+        <h1 id="skill-title">Graphic Design Roadmap</h1>
+        <p id="skill-desc">
+          Learn how to communicate ideas visually. Follow a step-by-step path
+          from design principles to a finished portfolio.
+        </p>
+        <div class="header-buttons">
+          <a href="learner/learn.html?skill=graphic-design&amp;step=1" class="btn btn-primary" id="start-btn">Start Free Lesson</a>
+          <a href="auth/signup.html" class="btn btn-outline">Save to My Learning</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="skill-layout">
+
+      <!-- ROADMAP -->
+      <section class="roadmap">
+        <h2>Learning Roadmap</h2>
+
+        <!-- JS LATER: build this list from the steps of the chosen skill -->
+        <ol class="step-list" id="step-list">
+
+          <li class="step-item">
+            <a href="learner/learn.html?skill=graphic-design&amp;step=1">
+              <span class="step-number">1</span>
+              <span class="step-info">
+                <strong>Introduction to Graphic Design</strong>
+                <small>What design is and where it is used.</small>
+              </span>
+              <span class="badge badge-free">FREE</span>
+            </a>
+          </li>
+
+          <li class="step-item">
+            <a href="learner/learn.html?skill=graphic-design&amp;step=2">
+              <span class="step-number">2</span>
+              <span class="step-info">
+                <strong>Understanding Design Principles</strong>
+                <small>Balance, contrast, hierarchy and alignment.</small>
+              </span>
+              <span class="badge badge-free">FREE</span>
+            </a>
+          </li>
+
+          <!-- Unlock message, shown at the first locked lesson -->
+          <li class="unlock-banner">
+            <strong>You're making progress!</strong>
+            <p>Unlock the complete Graphic Design roadmap to continue developing your skills.</p>
+            <a href="pro/pricing.html" class="btn btn-primary">Unlock with AllSkills Pro</a>
+          </li>
+
+          <li class="step-item locked">
+            <a href="pro/pricing.html">
+              <span class="step-number">3</span>
+              <span class="step-info">
+                <strong>Typography</strong>
+                <small>Choosing, pairing and using fonts.</small>
+              </span>
+              <span class="badge badge-pro">PRO</span>
+            </a>
+          </li>
+
+          <li class="step-item locked">
+            <a href="pro/pricing.html">
+              <span class="step-number">4</span>
+              <span class="step-info">
+                <strong>Colour Theory</strong>
+                <small>How colours work together and affect people.</small>
+              </span>
+              <span class="badge badge-pro">PRO</span>
+            </a>
+          </li>
+
+          <li class="step-item locked">
+            <a href="pro/pricing.html">
+              <span class="step-number">5</span>
+              <span class="step-info">
+                <strong>Canva</strong>
+                <small>Create quick, professional designs.</small>
+              </span>
+              <span class="badge badge-pro">PRO</span>
+            </a>
+          </li>
+
+          <li class="step-item locked">
+            <a href="pro/pricing.html">
+              <span class="step-number">6</span>
+              <span class="step-info">
+                <strong>Adobe Photoshop</strong>
+                <small>Edit and compose images.</small>
+              </span>
+              <span class="badge badge-pro">PRO</span>
+            </a>
+          </li>
+
+          <li class="step-item locked">
+            <a href="pro/pricing.html">
+              <span class="step-number">7</span>
+              <span class="step-info">
+                <strong>Adobe Illustrator</strong>
+                <small>Draw logos and vector graphics.</small>
+              </span>
+              <span class="badge badge-pro">PRO</span>
+            </a>
+          </li>
+
+          <li class="step-item locked">
+            <a href="pro/pricing.html">
+              <span class="step-number">8</span>
+              <span class="step-info">
+                <strong>Branding and Identity</strong>
+                <small>Build a consistent look for a business.</small>
+              </span>
+              <span class="badge badge-pro">PRO</span>
+            </a>
+          </li>
+
+          <li class="step-item locked">
+            <a href="pro/pricing.html">
+              <span class="step-number">9</span>
+              <span class="step-info">
+                <strong>Practical Design</strong>
+                <small>Posters, social media and print projects.</small>
+              </span>
+              <span class="badge badge-pro">PRO</span>
+            </a>
+          </li>
+
+          <li class="step-item locked">
+            <a href="pro/pricing.html">
+              <span class="step-number">10</span>
+              <span class="step-info">
+                <strong>Portfolio Development</strong>
+                <small>Present your best work to clients and employers.</small>
+              </span>
+              <span class="badge badge-pro">PRO</span>
+            </a>
+          </li>
+
+        </ol>
+      </section>
+
+      <!-- SIDE PANEL -->
+      <aside class="side-panel">
+
+        <div class="panel">
+          <h3>Skill Details</h3>
+          <ul class="detail-list">
+            <li><span>Category</span><strong id="detail-category">Design</strong></li>
+            <li><span>Level</span><strong id="detail-level">Beginner</strong></li>
+            <li><span>Duration</span><strong id="detail-duration">8 weeks (estimate)</strong></li>
+            <li><span>Steps</span><strong id="detail-steps">10</strong></li>
+            <li><span>Free steps</span><strong id="detail-free">2</strong></li>
+          </ul>
+        </div>
+
+        <div class="panel panel-dark">
+          <h3>Go Further with Pro</h3>
+          <p>Unlock every step, practical assignments and advanced progress tracking.</p>
+          <a href="pro/pricing.html" class="btn btn-light">See AllSkills Pro</a>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>AllSkills</h3>
+        <p>One platform. Endless skills. Discover, learn and develop practical skills with structured roadmaps.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="skills.html">Explore Skills</a>
+        <a href="articles.html">Articles</a>
+        <a href="pro/pricing.html">AllSkills Pro</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth/login.html">Login</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:info@allskills.com">info@allskills.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+      <a href="#top" class="back-top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- JS LATER:
+  <script src="js/skills.js"></script>
+  <script src="js/main.js"></script> -->
+
+</body>
+</html>

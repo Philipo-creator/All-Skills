@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Free articles about learning, skills and personal development from AllSkills.">
+  <title>AllSkills | Articles</title>
+  <link rel="icon" href="img/Skills.png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/public.css">
+  <link rel="stylesheet" href="styles/articles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="head">
+      <a href="index.html" class="logo">
+        <img src="img/Skills.png" alt="AllSkills logo"><strong>A</strong>ll<strong>S</strong>kills
+      </a>
+      <a href="auth/signup.html" class="btn btn-primary">Get Started</a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="skills.html">Explore Skills</a>
+      <a href="about.html">About Us</a>
+      <a href="articles.html" class="current">Articles</a>
+      <a href="contact.html">Contact</a>
+      <a href="auth/login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1. INTRODUCTION -->
+    <section class="page-intro" id="top">
+      <p class="intro-tag">ARTICLES</p>
+      <h1>Learn Something New Every Week</h1>
+      <p>
+        Free articles on learning, skills and personal development.
+        Everyone can read them, no account needed.
+      </p>
+    </section>
+
+    <!-- 2. TOPICS -->
+    <section class="section topics">
+      <!-- JS LATER: filter the articles by topic -->
+      <div class="chips">
+        <a href="articles.html" class="chip active">All</a>
+        <a href="articles.html?topic=learning" class="chip">Learning Tips</a>
+        <a href="articles.html?topic=careers" class="chip">Careers</a>
+        <a href="articles.html?topic=technology" class="chip">Technology</a>
+        <a href="articles.html?topic=design" class="chip">Design</a>
+        <a href="articles.html?topic=business" class="chip">Business</a>
+      </div>
+    </section>
+
+    <!-- 3. FEATURED ARTICLE -->
+    <section class="section featured-wrap">
+      <!-- JS LATER: show the newest or pinned article here -->
+      <a href="#" class="featured">
+        <div class="featured-image">Image</div>
+        <div class="featured-text">
+          <span class="tag">Learning Tips</span>
+          <h2>How to Choose Your First Skill</h2>
+          <p>A simple way to compare skills by interest, time and goals, so you can start with confidence.</p>
+          <span class="read-more">Read article &rarr;</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- 4. LATEST ARTICLES -->
+    <section class="section">
+      <h2>Latest Articles</h2>
+      <p class="section-sub">Sample layout. Real articles appear here once you publish them.</p>
+
+      <!-- JS LATER: build these cards from an articles data file -->
+      <div class="article-grid" id="article-list">
+
+        <a href="#" class="article-card">
+          <div class="article-image">Image</div>
+          <div class="article-body">
+            <span class="tag">Technology</span>
+            <h3>Where to Begin with Web Development</h3>
+            <p>The basic order of HTML, CSS and JavaScript, and why it works.</p>
+            <span class="article-meta">5 min read</span>
+          </div>
+        </a>
+
+        <a href="#" class="article-card">
+          <div class="article-image">Image</div>
+          <div class="article-body">
+            <span class="tag">Design</span>
+            <h3>Design Basics Anyone Can Learn</h3>
+            <p>Four simple principles that make any design look more professional.</p>
+            <span class="article-meta">4 min read</span>
+          </div>
+        </a>
+
+        <a href="#" class="article-card">
+          <div class="article-image">Image</div>
+          <div class="article-body">
+            <span class="tag">Learning Tips</span>
+            <h3>Practising Every Day Beats Studying Once a Week</h3>
+            <p>How short daily sessions help new skills stick.</p>
+            <span class="article-meta">3 min read</span>
+          </div>
+        </a>
+
+        <a href="#" class="article-card">
+          <div class="article-image">Image</div>
+          <div class="article-body">
+            <span class="tag">Business</span>
+            <h3>Turning a Skill into Income</h3>
+            <p>Simple ways to offer what you have learned to real customers.</p>
+            <span class="article-meta">6 min read</span>
+          </div>
+        </a>
+
+        <a href="#" class="article-card">
+          <div class="article-image">Image</div>
+          <div class="article-body">
+            <span class="tag">Careers</span>
+            <h3>Building a Portfolio from Nothing</h3>
+            <p>What to include and how to show your work to clients.</p>
+            <span class="article-meta">5 min read</span>
+          </div>
+        </a>
+
+        <a href="#" class="article-card">
+          <div class="article-image">Image</div>
+          <div class="article-body">
+            <span class="tag">Learning Tips</span>
+            <h3>Learning Several Skills Without Burning Out</h3>
+            <p>How to balance more than one roadmap at the same time.</p>
+            <span class="article-meta">4 min read</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 5. CALL TO ACTION -->
+    <section class="final-cta">
+      <h2>Ready to Put It into Practice?</h2>
+      <p>Pick a skill and open your first free lesson.</p>
+      <a href="skills.html" class="btn btn-light">Explore Skills</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>AllSkills</h3>
+        <p>One platform. Endless skills. Discover, learn and develop practical skills with structured roadmaps.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="skills.html">Explore Skills</a>
+        <a href="articles.html">Articles</a>
+        <a href="pro/pricing.html">AllSkills Pro</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth/login.html">Login</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:info@allskills.com">info@allskills.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+      <a href="#top" class="back-top">Back to top</a>
+    </div>
+  </footer>
+
+</body>
+</html>

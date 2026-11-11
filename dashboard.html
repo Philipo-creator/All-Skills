@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Your AllSkills learning dashboard.">
+  <title>AllSkills | Dashboard</title>
+  <link rel="icon" href="../img/Skills.png">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+
+<div class="dashboard">
+
+  <!-- FIXED LEFT SIDEBAR (the same block is repeated on every learner page) -->
+  <aside class="sidebar">
+    <div class="side-head">
+      <img src="../img/Skills.png" alt="AllSkills logo">
+      <h2>AllSkills</h2>
+    </div>
+
+    <div class="side-profile">
+      <div class="avatar" id="user-initial">U</div>
+      <div>
+        <strong id="user-name">Your Name</strong>
+        <small id="user-plan">Free plan</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="dashboard.html" class="active-link"><span>⌂</span><b>Overview</b></a>
+      <a href="../skills.html"><span>✧</span><b>Explore Skills</b></a>
+      <a href="my-learning.html"><span>▤</span><b>My Learning</b></a>
+      <a href="progress.html"><span>▥</span><b>My Progress</b></a>
+      <a href="saved.html"><span>☆</span><b>Saved Skills</b></a>
+      <a href="profile.html"><span>♙</span><b>Profile</b></a>
+    </nav>
+
+    <div class="side-bottom">
+      <a href="../index.html"><span>↪</span><b>Sign Out</b></a>
+    </div>
+  </aside>
+
+  <label for="menu-toggle" class="sidebar-overlay"></label>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <header class="topbar">
+      <div class="top-left">
+        <label for="menu-toggle" class="top-menu">☰</label>
+        <h2>Overview</h2>
+      </div>
+      <a href="../pro/pricing.html" class="btn btn-primary">Upgrade to Pro</a>
+    </header>
+
+    <div class="content">
+
+      <!-- WELCOME -->
+      <div class="page-head">
+        <!-- JS LATER: replace "Name" with the learner's saved name -->
+        <h1>Welcome back, <span id="welcome-name">Name</span></h1>
+        <p>Continue developing your skills.</p>
+      </div>
+
+      <!-- 1. CONTINUE LEARNING -->
+      <section class="block">
+        <div class="block-head"><h2>Continue Learning</h2></div>
+
+        <!-- JS LATER: show the last lesson the learner opened.
+             SAMPLE CONTENT below. Replace with the empty state
+             when the learner has not started anything. -->
+        <div class="continue-card" id="continue-card">
+          <div>
+            <span class="small-label">Pick up where you stopped</span>
+            <h3>HTML &amp; CSS</h3>
+            <p>Next: Step 6, Making Pages Responsive</p>
+            <div class="progress-bar"><div style="width:60%"></div></div>
+          </div>
+          <a href="learn.html?skill=html-css&amp;step=6" class="btn btn-light">Continue</a>
+        </div>
+      </section>
+
+      <!-- 2. OVERALL PROGRESS -->
+      <section class="block">
+        <div class="block-head"><h2>Overall Learning Progress</h2></div>
+
+        <!-- JS LATER: fill these four numbers from saved progress -->
+        <div class="stat-grid">
+          <div class="stat-card"><p>Skills Started</p><h3 id="stat-started">—</h3></div>
+          <div class="stat-card"><p>Steps Completed</p><h3 id="stat-steps">—</h3></div>
+          <div class="stat-card"><p>Skills Completed</p><h3 id="stat-completed">—</h3></div>
+          <div class="stat-card"><p>Overall Progress</p><h3 id="stat-overall">—</h3></div>
+        </div>
+      </section>
+
+      <!-- 3. MY ACTIVE SKILLS -->
+      <section class="block">
+        <div class="block-head">
+          <h2>My Active Skills</h2>
+          <a href="my-learning.html">View all</a>
+        </div>
+
+        <!-- JS LATER: build these cards from the learner's skills.
+             SAMPLE CONTENT below. -->
+        <div class="grid-3" id="active-skills">
+          <div class="card">
+            <div class="card-top"><span class="small-label">Design</span><span class="badge badge-pro">PRO</span></div>
+            <h3>Graphic Design</h3>
+            <div class="progress-info"><span>Progress</span><span>35%</span></div>
+            <div class="progress-bar"><div style="width:35%"></div></div>
+            <a href="learn.html?skill=graphic-design&amp;step=3" class="card-link">Continue</a>
+          </div>
+
+          <div class="card">
+            <div class="card-top"><span class="small-label">Technology</span><span class="badge badge-free">FREE</span></div>
+            <h3>HTML &amp; CSS</h3>
+            <div class="progress-info"><span>Progress</span><span>60%</span></div>
+            <div class="progress-bar"><div style="width:60%"></div></div>
+            <a href="learn.html?skill=html-css&amp;step=6" class="card-link">Continue</a>
+          </div>
+
+          <div class="card">
+            <div class="card-top"><span class="small-label">Business</span><span class="badge badge-pro">PRO</span></div>
+            <h3>Digital Marketing</h3>
+            <div class="progress-info"><span>Progress</span><span>10%</span></div>
+            <div class="progress-bar"><div style="width:10%"></div></div>
+            <a href="learn.html?skill=digital-marketing&amp;step=1" class="card-link">Continue</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. RECENTLY VIEWED -->
+      <section class="block">
+        <div class="block-head"><h2>Recently Viewed Skills</h2></div>
+
+        <!-- JS LATER: list the skills the learner opened recently -->
+        <div class="empty-state" id="recent-skills">
+          <span class="empty-icon">◷</span>
+          <h3>Nothing viewed yet</h3>
+          <p>Skills you open will appear here so you can find them again quickly.</p>
+          <a href="../skills.html" class="btn btn-primary">Explore Skills</a>
+        </div>
+      </section>
+
+      <!-- 5. RECOMMENDED SKILLS -->
+      <section class="block">
+        <div class="block-head">
+          <h2>Recommended Skills</h2>
+          <a href="../skills.html">See all</a>
+        </div>
+
+        <!-- JS LATER: suggest skills based on what the learner is studying.
+             SAMPLE CONTENT below. -->
+        <div class="grid-3" id="recommended-skills">
+          <a href="../skill.html?id=javascript" class="card">
+            <div class="card-top"><span class="small-label">Technology</span><span class="badge badge-pro">PRO</span></div>
+            <h3>JavaScript</h3>
+            <p>Make web pages interactive and build real web apps.</p>
+          </a>
+          <a href="../skill.html?id=ui-ux-design" class="card">
+            <div class="card-top"><span class="small-label">Design</span><span class="badge badge-pro">PRO</span></div>
+            <h3>UI/UX Design</h3>
+            <p>Design apps and websites that people find easy to use.</p>
+          </a>
+          <a href="../skill.html?id=entrepreneurship" class="card">
+            <div class="card-top"><span class="small-label">Business</span><span class="badge badge-free">FREE</span></div>
+            <h3>Entrepreneurship</h3>
+            <p>Turn an idea into a business, from validation to first customers.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- 6. LEARNING ACTIVITY -->
+      <section class="block">
+        <div class="block-head"><h2>Learning Activity</h2></div>
+
+        <!-- JS LATER: show completed steps and recent lessons -->
+        <div class="empty-state" id="activity">
+          <span class="empty-icon">▥</span>
+          <h3>No activity yet</h3>
+          <p>Complete a lesson and your learning activity will appear here.</p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="dashboard-footer">
+      <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>

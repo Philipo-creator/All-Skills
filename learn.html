@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Learn step by step on AllSkills.">
+  <title>AllSkills | Lesson</title>
+  <link rel="icon" href="../img/Skills.png">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/learning.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="curriculum-toggle">
+
+<!-- TOP BAR (the public menu is replaced by learner links) -->
+<header class="learn-header">
+  <div class="learn-left">
+    <label for="curriculum-toggle" class="steps-btn">☰ Steps</label>
+    <a href="dashboard.html" class="brand">
+      <img src="../img/Skills.png" alt="AllSkills logo">
+      <span>AllSkills</span>
+    </a>
+  </div>
+  <nav class="learn-links">
+    <a href="../skill.html?id=graphic-design" id="back-skill">Skill Roadmap</a>
+    <a href="my-learning.html">My Learning</a>
+    <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+  </nav>
+</header>
+
+<div class="learn-layout">
+
+  <!-- LEFT: CURRICULUM -->
+  <!-- JS LATER: build this list from the steps of the chosen skill
+       (?skill=graphic-design) and mark the current step (?step=3).
+       The content below is SAMPLE content. -->
+  <aside class="curriculum">
+
+    <div class="cur-head">
+      <span class="small-label">Design</span>
+      <h2 id="cur-skill">Graphic Design</h2>
+      <div class="progress-info"><span>2 of 10 steps completed</span><span>20%</span></div>
+      <div class="progress-bar"><div style="width:20%"></div></div>
+    </div>
+
+    <ol class="cur-list" id="cur-list">
+
+      <li class="cur-step done">
+        <a href="learn.html?skill=graphic-design&amp;step=1">
+          <span class="status">✓</span>
+          <span class="cur-title">Introduction to Graphic Design</span>
+          <span class="badge badge-free">FREE</span>
+        </a>
+      </li>
+
+      <li class="cur-step done">
+        <a href="learn.html?skill=graphic-design&amp;step=2">
+          <span class="status">✓</span>
+          <span class="cur-title">Understanding Design Principles</span>
+          <span class="badge badge-free">FREE</span>
+        </a>
+      </li>
+
+      <li class="cur-step current">
+        <a href="learn.html?skill=graphic-design&amp;step=3">
+          <span class="status">3</span>
+          <span class="cur-title">Typography</span>
+          <span class="badge badge-pro">PRO</span>
+        </a>
+      </li>
+
+      <li class="cur-step">
+        <a href="learn.html?skill=graphic-design&amp;step=4">
+          <span class="status">4</span>
+          <span class="cur-title">Colour Theory</span>
+          <span class="badge badge-pro">PRO</span>
+        </a>
+      </li>
+
+      <li class="cur-step">
+        <a href="learn.html?skill=graphic-design&amp;step=5">
+          <span class="status">5</span>
+          <span class="cur-title">Canva</span>
+          <span class="badge badge-pro">PRO</span>
+        </a>
+      </li>
+
+      <li class="cur-step">
+        <a href="learn.html?skill=graphic-design&amp;step=6">
+          <span class="status">6</span>
+          <span class="cur-title">Adobe Photoshop</span>
+          <span class="badge badge-pro">PRO</span>
+        </a>
+      </li>
+
+      <li class="cur-step">
+        <a href="learn.html?skill=graphic-design&amp;step=7">
+          <span class="status">7</span>
+          <span class="cur-title">Adobe Illustrator</span>
+          <span class="badge badge-pro">PRO</span>
+        </a>
+      </li>
+
+      <li class="cur-step">
+        <a href="learn.html?skill=graphic-design&amp;step=8">
+          <span class="status">8</span>
+          <span class="cur-title">Branding and Identity</span>
+          <span class="badge badge-pro">PRO</span>
+        </a>
+      </li>
+
+      <li class="cur-step">
+        <a href="learn.html?skill=graphic-design&amp;step=9">
+          <span class="status">9</span>
+          <span class="cur-title">Practical Design</span>
+          <span class="badge badge-pro">PRO</span>
+        </a>
+      </li>
+
+      <li class="cur-step">
+        <a href="learn.html?skill=graphic-design&amp;step=10">
+          <span class="status">10</span>
+          <span class="cur-title">Portfolio Development</span>
+          <span class="badge badge-pro">PRO</span>
+        </a>
+      </li>
+
+      <!-- LOCKED STEP EXAMPLE (for a free learner). JS LATER adds
+           class="locked" and links the step to ../pro/pricing.html:
+
+      <li class="cur-step locked">
+        <a href="../pro/pricing.html">
+          <span class="status">🔒</span>
+          <span class="cur-title">Typography</span>
+          <span class="badge badge-pro">PRO</span>
+        </a>
+      </li>
+      -->
+
+    </ol>
+  </aside>
+
+  <!-- RIGHT: LESSON -->
+  <main class="lesson" id="top">
+
+    <!-- Lesson header -->
+    <section class="lesson-head">
+      <span class="tag" id="lesson-tag">Graphic Design &bull; Step 3 of 10</span>
+      <h1 id="lesson-title">Typography Fundamentals</h1>
+      <p class="lesson-sub">Estimated time: 45 minutes (sample)</p>
+    </section>
+
+    <!-- Learning objectives -->
+    <section class="lesson-card">
+      <h2>Learning Objectives</h2>
+      <ul class="objectives" id="objectives">
+        <li>Understand what typography is.</li>
+        <li>Learn the main font classifications.</li>
+        <li>Understand font pairing.</li>
+        <li>Apply typography in a design.</li>
+      </ul>
+    </section>
+
+    <!-- Video -->
+    <!-- JS LATER / CONTENT LATER: replace this box with a real video
+         embed for the lesson. Use only videos you made or are allowed to use. -->
+    <section class="lesson-card">
+      <h2>Video Lesson</h2>
+      <div class="video-box" id="lesson-video">
+        <span class="play">▶</span>
+        <p>Video lesson placeholder</p>
+      </div>
+    </section>
+
+    <!-- Article -->
+    <section class="lesson-card">
+      <h2>Lesson Notes</h2>
+      <div class="article" id="lesson-article">
+        <h3>What is typography?</h3>
+        <p>
+          Typography is the art of arranging text so it is easy to read and
+          pleasant to look at. It covers the fonts you choose, their size,
+          spacing and how they work together on the page.
+        </p>
+
+        <h3>Main font groups</h3>
+        <ul>
+          <li><strong>Serif:</strong> fonts with small strokes on the letters, often used for books and formal text.</li>
+          <li><strong>Sans-serif:</strong> clean fonts without those strokes, common on websites and apps.</li>
+          <li><strong>Script:</strong> fonts that look handwritten, best used sparingly.</li>
+          <li><strong>Display:</strong> bold, decorative fonts for headings and logos.</li>
+        </ul>
+
+        <h3>Pairing fonts</h3>
+        <p>
+          A simple rule is to use two fonts at most: one for headings and one
+          for body text. Choose fonts that look clearly different, then keep
+          your sizes and spacing consistent.
+        </p>
+      </div>
+    </section>
+
+    <!-- External resources -->
+    <!-- CONTENT LATER: add real links you have checked. The # links
+         below are placeholders. -->
+    <section class="lesson-card">
+      <h2>Learning Resources</h2>
+      <ul class="resource-list" id="resources">
+        <li><a href="#"><span>Resource title one</span><small>Article &bull; link coming soon</small></a></li>
+        <li><a href="#"><span>Resource title two</span><small>Video &bull; link coming soon</small></a></li>
+        <li><a href="#"><span>Resource title three</span><small>Downloadable guide &bull; link coming soon</small></a></li>
+      </ul>
+    </section>
+
+    <!-- Practical assignment -->
+    <section class="lesson-card assignment">
+      <span class="badge badge-pro">ASSIGNMENT</span>
+      <h2>Practical Assignment</h2>
+      <p id="assignment-text">
+        Design a simple poster using only two fonts. Use one font for the
+        heading and one for the body text, and keep the spacing consistent.
+        Save your finished poster to add to your portfolio later.
+      </p>
+    </section>
+
+    <!-- Locked lesson message (shown instead of the lesson to free learners).
+         JS LATER: remove "hidden" when a free learner opens a Pro step. -->
+    <section class="locked-panel" id="locked-panel" hidden>
+      <span class="lock-icon">🔒</span>
+      <h2>You're making progress!</h2>
+      <p>Unlock the complete Graphic Design roadmap to continue developing your skills.</p>
+      <a href="../pro/pricing.html" class="btn btn-primary">Unlock with AllSkills Pro</a>
+    </section>
+
+    <!-- Mark as complete -->
+    <!-- JS LATER: save the step as complete, update the progress bar and
+         turn this button into "Completed ✓" -->
+    <section class="complete-box">
+      <div>
+        <h2>Finished this step?</h2>
+        <p>Mark it as complete to update your progress.</p>
+      </div>
+      <button type="button" class="btn btn-primary" id="complete-btn">Mark as Complete</button>
+    </section>
+
+    <!-- Previous and Next -->
+    <!-- JS LATER: set these links from the current step number -->
+    <div class="step-nav">
+      <a href="learn.html?skill=graphic-design&amp;step=2" class="btn btn-outline" id="prev-btn">&larr; Previous Step</a>
+      <a href="learn.html?skill=graphic-design&amp;step=4" class="btn btn-primary" id="next-btn">Continue to Next Step &rarr;</a>
+    </div>
+
+  </main>
+
+</div>
+
+<footer class="app-footer">
+  <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

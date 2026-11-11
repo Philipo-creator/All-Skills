@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Your learning statistics on AllSkills.">
+  <title>AllSkills | My Progress</title>
+  <link rel="icon" href="../img/Skills.png">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+
+<div class="dashboard">
+
+  <aside class="sidebar">
+    <div class="side-head">
+      <img src="../img/Skills.png" alt="AllSkills logo">
+      <h2>AllSkills</h2>
+    </div>
+
+    <div class="side-profile">
+      <div class="avatar" id="user-initial">U</div>
+      <div>
+        <strong id="user-name">Your Name</strong>
+        <small id="user-plan">Free plan</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="dashboard.html"><span>⌂</span><b>Overview</b></a>
+      <a href="../skills.html"><span>✧</span><b>Explore Skills</b></a>
+      <a href="my-learning.html"><span>▤</span><b>My Learning</b></a>
+      <a href="progress.html" class="active-link"><span>▥</span><b>My Progress</b></a>
+      <a href="saved.html"><span>☆</span><b>Saved Skills</b></a>
+      <a href="profile.html"><span>♙</span><b>Profile</b></a>
+    </nav>
+
+    <div class="side-bottom">
+      <a href="../index.html"><span>↪</span><b>Sign Out</b></a>
+    </div>
+  </aside>
+
+  <label for="menu-toggle" class="sidebar-overlay"></label>
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <div class="top-left">
+        <label for="menu-toggle" class="top-menu">☰</label>
+        <h2>My Progress</h2>
+      </div>
+      <a href="../pro/pricing.html" class="btn btn-primary">Upgrade to Pro</a>
+    </header>
+
+    <div class="content">
+
+      <div class="page-head">
+        <h1>My Progress</h1>
+        <p>See how far you have come across all your skills.</p>
+      </div>
+
+      <!-- STATS -->
+      <section class="block">
+        <!-- JS LATER: fill from saved progress -->
+        <div class="stat-grid">
+          <div class="stat-card"><p>Skills Started</p><h3 id="stat-started">—</h3></div>
+          <div class="stat-card"><p>Steps Completed</p><h3 id="stat-steps">—</h3></div>
+          <div class="stat-card"><p>Skills Completed</p><h3 id="stat-completed">—</h3></div>
+          <div class="stat-card"><p>Overall Progress</p><h3 id="stat-overall">—</h3></div>
+        </div>
+      </section>
+
+      <!-- PROGRESS PER SKILL -->
+      <section class="block">
+        <div class="block-head"><h2>Progress by Skill</h2></div>
+
+        <!-- JS LATER: build one row per skill. SAMPLE CONTENT below. -->
+        <div id="skill-progress">
+
+          <div class="progress-row">
+            <h3>Graphic Design</h3>
+            <div class="progress-info"><span>3 of 10 steps</span><span>35%</span></div>
+            <div class="progress-bar large"><div style="width:35%"></div></div>
+          </div>
+
+          <div class="progress-row">
+            <h3>HTML &amp; CSS</h3>
+            <div class="progress-info"><span>6 of 10 steps</span><span>60%</span></div>
+            <div class="progress-bar large"><div style="width:60%"></div></div>
+          </div>
+
+          <div class="progress-row">
+            <h3>Digital Marketing</h3>
+            <div class="progress-info"><span>1 of 8 steps</span><span>10%</span></div>
+            <div class="progress-bar large"><div style="width:10%"></div></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- RECENT ACTIVITY -->
+      <section class="block">
+        <div class="block-head"><h2>Recent Activity</h2></div>
+
+        <!-- JS LATER: list completed lessons with dates -->
+        <div class="empty-state" id="activity">
+          <span class="empty-icon">◷</span>
+          <h3>No activity yet</h3>
+          <p>Every lesson you complete will be recorded here.</p>
+        </div>
+      </section>
+
+      <!-- ADVANCED ANALYTICS (PRO) -->
+      <section class="block">
+        <div class="locked-card">
+          <span class="badge badge-pro">PRO</span>
+          <h3>Advanced Learning Analytics</h3>
+          <p>See study time, weekly trends and detailed breakdowns of your progress with AllSkills Pro.</p>
+          <a href="../pro/pricing.html" class="btn btn-primary">See AllSkills Pro</a>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="dashboard-footer">
+      <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>

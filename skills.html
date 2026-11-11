@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Explore every skill available on AllSkills.">
+  <title>AllSkills | Explore Skills</title>
+  <link rel="icon" href="img/Skills.png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/public.css">
+  <link rel="stylesheet" href="styles/skills.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="head">
+      <a href="index.html" class="logo">
+        <img src="img/Skills.png" alt="AllSkills logo"><strong>A</strong>ll<strong>S</strong>kills
+      </a>
+      <a href="auth/signup.html" class="btn btn-primary">Get Started</a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="skills.html" class="current">Explore Skills</a>
+      <a href="about.html">About Us</a>
+      <a href="articles.html">Articles</a>
+      <a href="contact.html">Contact</a>
+      <a href="auth/login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1. PAGE INTRODUCTION -->
+    <section class="page-intro" id="top">
+      <p class="intro-tag">EXPLORE SKILLS</p>
+      <h1>Find the Skill You Want to Learn</h1>
+      <p>
+        Browse the full AllSkills library. Every skill has a clear roadmap you
+        can view for free. No account needed to explore.
+      </p>
+
+      <!-- 2. SEARCH BAR -->
+      <!-- JS LATER: filter the cards below while the person types -->
+      <form class="search-bar" action="skills.html" method="get">
+        <input type="search" name="q" placeholder="Search skills, for example Graphic Design" aria-label="Search skills">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </section>
+
+    <!-- 3. CATEGORIES -->
+    <section class="section">
+      <h2>Skill Categories</h2>
+      <p class="section-sub">Choose a category to narrow the list.</p>
+
+      <!-- JS LATER: highlight the active category and filter the list -->
+      <div class="chips" id="category-filter">
+        <a href="skills.html" class="chip active">All</a>
+        <a href="skills.html?category=technology" class="chip">Technology</a>
+        <a href="skills.html?category=design" class="chip">Design</a>
+        <a href="skills.html?category=business" class="chip">Business</a>
+        <a href="skills.html?category=finance" class="chip">Finance</a>
+        <a href="skills.html?category=media" class="chip">Media</a>
+        <a href="skills.html?category=communication" class="chip">Communication</a>
+        <a href="skills.html?category=professional" class="chip">Professional</a>
+        <a href="skills.html?category=practical" class="chip">Practical</a>
+      </div>
+    </section>
+
+    <!-- 4. POPULAR SKILLS -->
+    <section class="section">
+      <h2>Popular Skills</h2>
+      <p class="section-sub">Where most learners start.</p>
+
+      <div class="skill-grid" id="popular-skills">
+
+        <a href="skill.html?id=html-css" class="skill-card">
+          <div class="skill-top">
+            <span class="skill-cat">Technology</span>
+            <span class="badge badge-free">FREE</span>
+          </div>
+          <h3>HTML &amp; CSS</h3>
+          <p>Build and style your first web pages from scratch.</p>
+          <ul class="skill-facts">
+            <li>Beginner</li><li>4-6 weeks</li><li>10 steps</li>
+          </ul>
+        </a>
+
+        <a href="skill.html?id=graphic-design" class="skill-card">
+          <div class="skill-top">
+            <span class="skill-cat">Design</span>
+            <span class="badge badge-pro">PRO</span>
+          </div>
+          <h3>Graphic Design</h3>
+          <p>Learn design principles, typography, colour and branding.</p>
+          <ul class="skill-facts">
+            <li>Beginner</li><li>8 weeks</li><li>10 steps</li>
+          </ul>
+        </a>
+
+        <a href="skill.html?id=digital-marketing" class="skill-card">
+          <div class="skill-top">
+            <span class="skill-cat">Business</span>
+            <span class="badge badge-pro">PRO</span>
+          </div>
+          <h3>Digital Marketing</h3>
+          <p>Reach customers online with content, social media and search.</p>
+          <ul class="skill-facts">
+            <li>Beginner</li><li>6 weeks</li><li>8 steps</li>
+          </ul>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 5. ALL AVAILABLE SKILLS -->
+    <section class="section">
+      <h2>All Available Skills</h2>
+      <p class="section-sub">
+        Everyone can view every roadmap. Free and Pro badges show which
+        lessons you can open without upgrading. Durations are estimates.
+      </p>
+
+      <!-- JS LATER: build these cards from js/skills.js so you can add
+           100 or 1,000 skills without editing this page -->
+      <div class="skill-grid" id="all-skills">
+
+        <a href="skill.html?id=html-css" class="skill-card" data-category="technology">
+          <div class="skill-top"><span class="skill-cat">Technology</span><span class="badge badge-free">FREE</span></div>
+          <h3>HTML &amp; CSS</h3>
+          <p>Build and style your first web pages from scratch.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>4-6 weeks</li><li>10 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=javascript" class="skill-card" data-category="technology">
+          <div class="skill-top"><span class="skill-cat">Technology</span><span class="badge badge-pro">PRO</span></div>
+          <h3>JavaScript</h3>
+          <p>Make web pages interactive and build real web apps.</p>
+          <ul class="skill-facts"><li>Intermediate</li><li>12 weeks</li><li>14 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=software-engineering" class="skill-card" data-category="technology">
+          <div class="skill-top"><span class="skill-cat">Technology</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Software Engineering</h3>
+          <p>Learn how professional software is planned, built and tested.</p>
+          <ul class="skill-facts"><li>Intermediate</li><li>16 weeks</li><li>16 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=graphic-design" class="skill-card" data-category="design">
+          <div class="skill-top"><span class="skill-cat">Design</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Graphic Design</h3>
+          <p>Learn design principles, typography, colour and branding.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>8 weeks</li><li>10 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=ui-ux-design" class="skill-card" data-category="design">
+          <div class="skill-top"><span class="skill-cat">Design</span><span class="badge badge-pro">PRO</span></div>
+          <h3>UI/UX Design</h3>
+          <p>Design apps and websites that people find easy to use.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>10 weeks</li><li>12 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=entrepreneurship" class="skill-card" data-category="business">
+          <div class="skill-top"><span class="skill-cat">Business</span><span class="badge badge-free">FREE</span></div>
+          <h3>Entrepreneurship</h3>
+          <p>Turn an idea into a business, from validation to first customers.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>6 weeks</li><li>8 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=digital-marketing" class="skill-card" data-category="business">
+          <div class="skill-top"><span class="skill-cat">Business</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Digital Marketing</h3>
+          <p>Reach customers online with content, social media and search.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>6 weeks</li><li>8 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=financial-literacy" class="skill-card" data-category="finance">
+          <div class="skill-top"><span class="skill-cat">Finance</span><span class="badge badge-free">FREE</span></div>
+          <h3>Financial Literacy</h3>
+          <p>Understand budgeting, saving and managing money wisely.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>4 weeks</li><li>6 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=accounting" class="skill-card" data-category="finance">
+          <div class="skill-top"><span class="skill-cat">Finance</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Accounting</h3>
+          <p>Learn the basics of recording and reporting business finances.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>8 weeks</li><li>10 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=photography" class="skill-card" data-category="media">
+          <div class="skill-top"><span class="skill-cat">Media</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Photography</h3>
+          <p>Take better photos with composition, light and editing.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>6 weeks</li><li>8 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=video-editing" class="skill-card" data-category="media">
+          <div class="skill-top"><span class="skill-cat">Media</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Video Editing</h3>
+          <p>Cut, arrange and polish videos for any platform.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>6 weeks</li><li>9 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=public-speaking" class="skill-card" data-category="communication">
+          <div class="skill-top"><span class="skill-cat">Communication</span><span class="badge badge-free">FREE</span></div>
+          <h3>Public Speaking</h3>
+          <p>Speak with clarity and confidence in front of any audience.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>4 weeks</li><li>6 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=writing" class="skill-card" data-category="communication">
+          <div class="skill-top"><span class="skill-cat">Communication</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Writing</h3>
+          <p>Write clearly for work, school, blogs and business.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>6 weeks</li><li>8 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=project-management" class="skill-card" data-category="professional">
+          <div class="skill-top"><span class="skill-cat">Professional</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Project Management</h3>
+          <p>Plan, organise and deliver projects on time.</p>
+          <ul class="skill-facts"><li>Intermediate</li><li>8 weeks</li><li>10 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=leadership" class="skill-card" data-category="professional">
+          <div class="skill-top"><span class="skill-cat">Professional</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Leadership</h3>
+          <p>Guide teams, make decisions and inspire others.</p>
+          <ul class="skill-facts"><li>Intermediate</li><li>6 weeks</li><li>8 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=tailoring" class="skill-card" data-category="practical">
+          <div class="skill-top"><span class="skill-cat">Practical</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Tailoring</h3>
+          <p>Learn measuring, cutting and sewing for clothing.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>12 weeks</li><li>12 steps</li></ul>
+        </a>
+
+        <a href="skill.html?id=electrical-skills" class="skill-card" data-category="practical">
+          <div class="skill-top"><span class="skill-cat">Practical</span><span class="badge badge-pro">PRO</span></div>
+          <h3>Electrical Skills</h3>
+          <p>Understand safe wiring, installation and basic repairs.</p>
+          <ul class="skill-facts"><li>Beginner</li><li>10 weeks</li><li>10 steps</li></ul>
+        </a>
+
+      </div>
+
+      <!-- JS LATER: show this message when a search or filter finds nothing -->
+      <div class="no-results" id="no-results" hidden>
+        <h3>No skills found</h3>
+        <p>Try a different word or choose another category.</p>
+      </div>
+    </section>
+
+    <!-- 6. FREE AND PRO NOTE -->
+    <section class="final-cta">
+      <h2>Not Sure Where to Start?</h2>
+      <p>
+        Open any roadmap to see every step. Free skills and introductory
+        lessons cost nothing, and you can upgrade to Pro whenever you want to go further.
+      </p>
+      <a href="pro/pricing.html" class="btn btn-light">Compare Free and Pro</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>AllSkills</h3>
+        <p>One platform. Endless skills. Discover, learn and develop practical skills with structured roadmaps.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="skills.html">Explore Skills</a>
+        <a href="articles.html">Articles</a>
+        <a href="pro/pricing.html">AllSkills Pro</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth/login.html">Login</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:info@allskills.com">info@allskills.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+      <a href="#top" class="back-top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- JS LATER:
+  <script src="js/skills.js"></script>
+  <script src="js/main.js"></script> -->
+
+</body>
+</html>

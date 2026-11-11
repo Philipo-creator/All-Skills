@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Manage your AllSkills profile and account.">
+  <title>AllSkills | Profile</title>
+  <link rel="icon" href="../img/Skills.png">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+
+<div class="dashboard">
+
+  <aside class="sidebar">
+    <div class="side-head">
+      <img src="../img/Skills.png" alt="AllSkills logo">
+      <h2>AllSkills</h2>
+    </div>
+
+    <div class="side-profile">
+      <div class="avatar" id="user-initial">U</div>
+      <div>
+        <strong id="user-name">Your Name</strong>
+        <small id="user-plan">Free plan</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="dashboard.html"><span>⌂</span><b>Overview</b></a>
+      <a href="../skills.html"><span>✧</span><b>Explore Skills</b></a>
+      <a href="my-learning.html"><span>▤</span><b>My Learning</b></a>
+      <a href="progress.html"><span>▥</span><b>My Progress</b></a>
+      <a href="saved.html"><span>☆</span><b>Saved Skills</b></a>
+      <a href="profile.html" class="active-link"><span>♙</span><b>Profile</b></a>
+    </nav>
+
+    <div class="side-bottom">
+      <a href="../index.html"><span>↪</span><b>Sign Out</b></a>
+    </div>
+  </aside>
+
+  <label for="menu-toggle" class="sidebar-overlay"></label>
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <div class="top-left">
+        <label for="menu-toggle" class="top-menu">☰</label>
+        <h2>Profile</h2>
+      </div>
+      <a href="../pro/pricing.html" class="btn btn-primary">Upgrade to Pro</a>
+    </header>
+
+    <div class="content">
+
+      <div class="page-head">
+        <h1>My Profile</h1>
+        <p>Manage your personal information and account.</p>
+      </div>
+
+      <div class="profile-layout">
+
+        <div>
+          <!-- PERSONAL INFORMATION -->
+          <!-- JS LATER / BACK END LATER: load the saved details and save changes -->
+          <form class="form-card" action="profile.html" method="get">
+            <h2>Personal Information</h2>
+            <div class="field">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Your full name">
+            </div>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com">
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </form>
+
+          <!-- CHANGE PASSWORD -->
+          <form class="form-card" action="profile.html" method="get">
+            <h2>Change Password</h2>
+            <div class="field">
+              <label for="current">Current Password</label>
+              <input type="password" id="current" name="current" placeholder="Your current password">
+            </div>
+            <div class="field">
+              <label for="new">New Password</label>
+              <input type="password" id="new" name="new" placeholder="At least 8 characters" minlength="8">
+            </div>
+            <button type="submit" class="btn btn-primary">Update Password</button>
+          </form>
+        </div>
+
+        <!-- PLAN -->
+        <aside>
+          <div class="plan-card">
+            <span class="badge badge-free">FREE</span>
+            <h2>AllSkills Free</h2>
+            <p>You can explore every skill, view every roadmap and open introductory lessons.</p>
+            <a href="../pro/pricing.html" class="btn btn-primary">Upgrade to Pro</a>
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+
+    <footer class="dashboard-footer">
+      <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>

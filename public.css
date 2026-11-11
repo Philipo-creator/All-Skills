@@ -1,0 +1,144 @@
+/* ========== PUBLIC: header, menu, footer ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4%;
+  background: var(--cream);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: var(--dark-brown);
+}
+
+.logo img {
+  width: 26px;
+  height: 26px;
+}
+
+.head .btn {
+  padding: 9px 16px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background: var(--dark-brown);
+  padding: 4px 0;
+  text-transform: uppercase;
+}
+
+.main-nav a {
+  color: var(--ice-blue);
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.main-nav a:hover {
+  background: var(--muted-brown);
+}
+
+.main-nav a.current {
+  background: var(--ice-blue);
+  color: var(--dark-brown);
+}
+
+/* Page sections */
+.section {
+  padding: 50px 7%;
+}
+
+.section > h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--dark-brown);
+  margin-bottom: 10px;
+}
+
+.section-sub {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--dark-brown);
+  color: var(--cream);
+  padding: 40px 7% 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-brand h3 {
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-col h4 {
+  color: var(--sky-blue);
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  display: block;
+  color: var(--ice-blue);
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.footer-col a:hover {
+  color: var(--sky-blue);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+}
+
+.back-top {
+  background: var(--cream);
+  color: var(--dark-brown);
+  padding: 6px 14px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 750px) {
+  .logo { font-size: 18px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+

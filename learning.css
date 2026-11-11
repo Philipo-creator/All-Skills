@@ -1,0 +1,470 @@
+/* ========== LEARNING ENVIRONMENT ========== */
+#curriculum-toggle {
+  display: none;
+}
+
+/* ---------- Top bar ---------- */
+.learn-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4%;
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+}
+
+.learn-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.steps-btn {
+  display: none;
+  padding: 8px 14px;
+  background: var(--dark-brown);
+  color: var(--cream);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.learn-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.learn-links a:not(.btn) {
+  color: var(--dark-brown);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.learn-links a:not(.btn):hover {
+  color: var(--deep-blue);
+}
+
+.learn-links .btn {
+  padding: 9px 16px;
+  font-size: 14px;
+}
+
+/* ---------- Two-column layout ---------- */
+.learn-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  align-items: start;
+}
+
+/* ---------- Curriculum (left) ---------- */
+.curriculum {
+  position: sticky;
+  top: 61px;
+  height: calc(100vh - 61px);
+  overflow-y: auto;
+  background: var(--cream);
+  border-right: 1px solid var(--border);
+  padding: 22px 18px;
+}
+
+.cur-head {
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cur-head h2 {
+  font-size: 22px;
+  color: var(--dark-brown);
+  margin: 6px 0 14px;
+}
+
+.small-label {
+  font-size: 12px;
+  color: var(--text-grey);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--text-grey);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--soft-grey);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: var(--deep-blue);
+  border-radius: 10px;
+}
+
+.cur-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cur-step a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.cur-step a:hover {
+  background: var(--ice-blue);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--soft-grey);
+  color: var(--dark-brown);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.cur-title {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--dark-brown);
+}
+
+/* Completed step */
+.cur-step.done .status {
+  background: var(--free);
+  color: white;
+}
+
+/* Current step */
+.cur-step.current a {
+  background: var(--ice-blue);
+  border-color: var(--deep-blue);
+}
+
+.cur-step.current .status {
+  background: var(--deep-blue);
+  color: white;
+}
+
+.cur-step.current .cur-title {
+  font-weight: bold;
+}
+
+/* Locked step */
+.cur-step.locked a {
+  opacity: 0.65;
+}
+
+.cur-step.locked .status {
+  background: var(--muted-brown);
+  color: white;
+}
+
+/* ---------- Lesson (right) ---------- */
+.lesson {
+  padding: 30px 30px 50px;
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+}
+
+.lesson-head {
+  margin-bottom: 22px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: var(--ice-blue);
+  color: var(--deep-blue);
+  margin-bottom: 12px;
+}
+
+.lesson-head h1 {
+  font-size: 32px;
+  color: var(--dark-brown);
+  margin-bottom: 8px;
+}
+
+.lesson-sub {
+  color: var(--text-grey);
+  font-size: 14px;
+}
+
+.lesson-card {
+  background: rgba(248, 246, 242, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 26px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.lesson-card h2 {
+  font-size: 20px;
+  color: var(--dark-brown);
+  margin-bottom: 14px;
+}
+
+/* Objectives */
+.objectives li {
+  position: relative;
+  padding: 9px 0 9px 28px;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.6;
+}
+
+.objectives li:last-child {
+  border-bottom: none;
+}
+
+.objectives li::before {
+  content: "◎";
+  position: absolute;
+  left: 0;
+  color: var(--deep-blue);
+}
+
+/* Video placeholder */
+.video-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  aspect-ratio: 16 / 9;
+  background: var(--dark-brown);
+  color: var(--cream);
+  border-radius: 8px;
+}
+
+.video-box .play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--dark-brown);
+  font-size: 24px;
+}
+
+/* Article */
+.article h3 {
+  font-size: 18px;
+  color: var(--deep-blue);
+  margin: 20px 0 8px;
+}
+
+.article h3:first-child {
+  margin-top: 0;
+}
+
+.article p {
+  line-height: 1.8;
+}
+
+.article ul {
+  list-style: disc;
+  margin: 10px 0 0 22px;
+  line-height: 1.9;
+}
+
+/* Resources */
+.resource-list li {
+  margin-bottom: 10px;
+}
+
+.resource-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+}
+
+.resource-list a:hover {
+  border-color: var(--deep-blue);
+}
+
+.resource-list span {
+  font-weight: bold;
+  color: var(--deep-blue);
+}
+
+.resource-list small {
+  color: var(--text-grey);
+}
+
+/* Assignment */
+.assignment {
+  border-left: 5px solid var(--deep-blue);
+}
+
+.assignment .badge {
+  margin-bottom: 10px;
+}
+
+.assignment p {
+  line-height: 1.8;
+}
+
+/* Locked panel */
+.locked-panel {
+  text-align: center;
+  background: var(--dark-brown);
+  color: var(--cream);
+  border-radius: 10px;
+  padding: 35px 24px;
+  margin-bottom: 20px;
+}
+
+.locked-panel[hidden] {
+  display: none;
+}
+
+.lock-icon {
+  display: block;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.locked-panel h2 {
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+
+.locked-panel p {
+  max-width: 460px;
+  margin: 0 auto 18px;
+  line-height: 1.7;
+}
+
+.locked-panel .btn-primary {
+  background: var(--cream);
+  color: var(--dark-brown);
+  border-color: var(--cream);
+}
+
+.locked-panel .btn-primary:hover {
+  background: var(--ice-blue);
+  border-color: var(--ice-blue);
+}
+
+/* Mark as complete */
+.complete-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px 26px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.complete-box h2 {
+  font-size: 19px;
+  color: var(--dark-brown);
+  margin-bottom: 4px;
+}
+
+.complete-box p {
+  color: var(--text-grey);
+  font-size: 14px;
+}
+
+.complete-box .btn {
+  border: none;
+}
+
+/* Previous and next */
+.step-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--dark-brown);
+}
+
+.btn-outline:hover {
+  background: var(--beige);
+}
+
+/* ---------- Tablet and mobile ---------- */
+@media (max-width: 900px) {
+  .learn-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-btn {
+    display: block;
+  }
+
+  .learn-links a:not(.btn) {
+    display: none;
+  }
+
+  /* The roadmap folds away until "Steps" is tapped */
+  .curriculum {
+    display: none;
+    position: static;
+    height: auto;
+    max-height: 60vh;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  #curriculum-toggle:checked ~ .learn-layout .curriculum {
+    display: block;
+  }
+
+  .lesson {
+    padding: 24px 18px 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .lesson-head h1 { font-size: 25px; }
+  .lesson-card { padding: 20px; }
+  .complete-box { padding: 20px; }
+  .step-nav .btn { width: 100%; }
+  .learn-links .btn { padding: 8px 12px; }
+}
+

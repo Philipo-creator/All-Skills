@@ -1,0 +1,553 @@
+/* ========== LEARNER PLATFORM: dashboard, learning, progress, saved, profile ========== */
+#menu-toggle {
+  display: none;
+}
+
+/* ---------- Fixed left sidebar ---------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: var(--dark-brown);
+  color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 30;
+  transition: transform 0.3s;
+}
+
+.side-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 22px;
+}
+
+.side-head img {
+  width: 28px;
+  height: 28px;
+}
+
+.side-head h2 {
+  font-size: 21px;
+  color: var(--cream);
+}
+
+.side-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 16px 10px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sky-blue);
+  color: var(--dark-brown);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.side-profile strong {
+  display: block;
+  font-size: 15px;
+}
+
+.side-profile small {
+  color: var(--soft-grey);
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  flex: 1;
+}
+
+.sidebar nav a,
+.side-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 14px;
+  border-radius: 7px;
+  color: var(--cream);
+  white-space: nowrap;
+}
+
+.sidebar nav a span,
+.side-bottom a span {
+  min-width: 22px;
+  font-size: 19px;
+  text-align: center;
+}
+
+.sidebar nav a:hover,
+.side-bottom a:hover {
+  background: var(--muted-brown);
+}
+
+.sidebar nav a.active-link {
+  background: var(--ice-blue);
+  color: var(--dark-brown);
+}
+
+.side-bottom {
+  padding: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 25;
+}
+
+/* ---------- Main area and top bar ---------- */
+.main-content {
+  margin-left: 260px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 30px;
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-menu {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--dark-brown);
+}
+
+.topbar h2 {
+  font-size: 20px;
+  color: var(--dark-brown);
+}
+
+.topbar .btn {
+  padding: 9px 16px;
+  font-size: 14px;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.dashboard-footer {
+  background: var(--dark-brown);
+  color: var(--cream);
+  text-align: center;
+  padding: 22px;
+}
+
+/* ---------- Page headings and sections ---------- */
+.page-head {
+  margin-bottom: 25px;
+}
+
+.page-head h1 {
+  font-size: 27px;
+  color: var(--dark-brown);
+  margin-bottom: 8px;
+}
+
+.page-head p {
+  color: var(--text-grey);
+  line-height: 1.7;
+}
+
+.block {
+  margin-bottom: 35px;
+}
+
+.block-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.block-head h2 {
+  font-size: 20px;
+  color: var(--dark-brown);
+}
+
+.block-head a {
+  color: var(--deep-blue);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* ---------- Stat cards ---------- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.stat-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 22px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.stat-card p {
+  color: var(--text-grey);
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.stat-card h3 {
+  font-size: 30px;
+  color: var(--deep-blue);
+}
+
+/* ---------- Progress bars ---------- */
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--text-grey);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--soft-grey);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: var(--deep-blue);
+  border-radius: 10px;
+}
+
+.progress-bar.large {
+  height: 14px;
+}
+
+/* ---------- Grids and cards ---------- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 22px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.card h3 {
+  color: var(--dark-brown);
+  margin-bottom: 8px;
+}
+
+.card > p {
+  color: var(--text-grey);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.small-label {
+  font-size: 12px;
+  color: var(--text-grey);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card .progress-bar {
+  margin-bottom: 16px;
+}
+
+.card-link {
+  display: block;
+  text-align: center;
+  padding: 11px;
+  background: var(--dark-brown);
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.card-link:hover {
+  background: var(--muted-brown);
+}
+
+a.card:hover {
+  border-color: var(--deep-blue);
+}
+
+/* Continue learning highlight */
+.continue-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--dark-brown);
+  color: var(--cream);
+  border-radius: 10px;
+  padding: 28px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.continue-card h3 {
+  color: var(--cream);
+  font-size: 22px;
+  margin: 6px 0;
+}
+
+.continue-card p {
+  color: var(--soft-grey);
+}
+
+.continue-card .progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 14px;
+  max-width: 320px;
+}
+
+.continue-card .progress-bar div {
+  background: var(--sky-blue);
+}
+
+/* ---------- Empty states ---------- */
+.empty-state {
+  background: rgba(248, 246, 242, 0.85);
+  border: 1px dashed var(--muted-brown);
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  display: block;
+  font-size: 34px;
+  color: var(--deep-blue);
+  margin-bottom: 14px;
+}
+
+.empty-state h3 {
+  color: var(--dark-brown);
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: var(--text-grey);
+  max-width: 480px;
+  margin: 0 auto 18px;
+  line-height: 1.7;
+}
+
+/* ---------- Per-skill progress rows ---------- */
+.progress-row {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 20px;
+  margin-bottom: 14px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.progress-row h3 {
+  color: var(--dark-brown);
+  font-size: 17px;
+}
+
+.progress-row .progress-info {
+  margin-top: 8px;
+}
+
+/* ---------- Locked Pro card ---------- */
+.locked-card {
+  text-align: center;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.locked-card h3 {
+  color: var(--dark-brown);
+  margin: 10px 0;
+}
+
+.locked-card p {
+  color: var(--text-grey);
+  max-width: 480px;
+  margin: 0 auto 18px;
+  line-height: 1.7;
+}
+
+/* ---------- Profile page ---------- */
+.profile-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.form-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  margin-bottom: 22px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.form-card h2 {
+  font-size: 19px;
+  color: var(--dark-brown);
+  margin-bottom: 18px;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: var(--deep-blue);
+}
+
+.form-card button {
+  border: none;
+}
+
+.plan-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 26px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.plan-card h2 {
+  font-size: 19px;
+  color: var(--dark-brown);
+  margin: 10px 0;
+}
+
+.plan-card p {
+  color: var(--text-grey);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* ---------- Tablet and mobile ---------- */
+@media (max-width: 1100px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  #menu-toggle:checked ~ .dashboard .sidebar {
+    transform: translateX(0);
+  }
+  #menu-toggle:checked ~ .dashboard .sidebar-overlay {
+    display: block;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .top-menu {
+    display: block;
+  }
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .topbar { padding: 14px 16px; }
+  .topbar h2 { font-size: 17px; }
+  .content { padding: 20px 16px; }
+  .grid-2,
+  .grid-3 { grid-template-columns: 1fr; }
+  .continue-card { padding: 22px; }
+}
+
+@media (max-width: 450px) {
+  .stat-card { padding: 16px; }
+  .stat-card h3 { font-size: 24px; }
+  .topbar .btn { display: none; }
+}
+

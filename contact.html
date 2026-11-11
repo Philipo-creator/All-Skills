@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Philip Chigozie">
+  <meta name="description" content="Contact AllSkills for questions, feedback and support.">
+  <title>AllSkills | Contact</title>
+  <link rel="icon" href="img/Skills.png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/public.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="head">
+      <a href="index.html" class="logo">
+        <img src="img/Skills.png" alt="AllSkills logo"><strong>A</strong>ll<strong>S</strong>kills
+      </a>
+      <a href="auth/signup.html" class="btn btn-primary">Get Started</a>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="skills.html">Explore Skills</a>
+      <a href="about.html">About Us</a>
+      <a href="articles.html">Articles</a>
+      <a href="contact.html" class="current">Contact</a>
+      <a href="auth/login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1. INTRODUCTION -->
+    <section class="contact-intro" id="top">
+      <div class="contact-text">
+        <p class="intro-tag">GET IN TOUCH</p>
+        <h1>Let's Start a Conversation</h1>
+        <p>
+          Have a question, suggestion or idea for a new skill? We would be
+          glad to hear from you.
+        </p>
+      </div>
+      <div class="contact-image">
+        <img src="img/4.jpg" alt="Contact AllSkills">
+      </div>
+    </section>
+
+    <!-- 2. CONTACT OPTIONS -->
+    <section class="section">
+      <h2>Ways to Reach Us</h2>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p>Send your questions and messages to our official address.</p>
+          <a href="mailto:info@allskills.com">info@allskills.com</a>
+        </div>
+        <div class="contact-card">
+          <h3>Social Media</h3>
+          <p>Follow us for updates and new skills.</p>
+          <!-- Replace # with your real social media links -->
+          <a href="#">Follow Us</a>
+        </div>
+        <div class="contact-card">
+          <h3>Suggest a Skill</h3>
+          <p>Want a skill added to the library? Tell us about it.</p>
+          <a href="#contact-form">Send a Suggestion</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CONTACT FORM -->
+    <section class="section" id="contact-form">
+      <h2>Send Us a Message</h2>
+      <p class="section-sub">Fill in the form and we will reply as soon as we can.</p>
+
+      <!-- JS LATER / BACK END LATER: this form does not send anything yet.
+           A back end or a form service is needed to receive messages. -->
+      <form class="contact-form" action="#" method="post">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose a topic</option>
+            <option>General question</option>
+            <option>Suggest a skill</option>
+            <option>Report a problem</option>
+            <option>AllSkills Pro</option>
+            <option>Partnership</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+        </div>
+        <div class="form-buttons">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="reset" class="btn btn-outline">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- 4. FAQ -->
+    <section class="section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details>
+          <summary>What is AllSkills?</summary>
+          <p>AllSkills is a skill discovery and structured learning platform with step-by-step roadmaps for many different skills.</p>
+        </details>
+        <details>
+          <summary>Do I need an account to explore skills?</summary>
+          <p>No. You can browse the whole library and view every roadmap without signing up. An account is needed to save your progress.</p>
+        </details>
+        <details>
+          <summary>What is the difference between Free and Pro?</summary>
+          <p>Free gives you the full library, every roadmap, introductory lessons and a dashboard. Pro adds complete learning paths, advanced lessons and extra features.</p>
+        </details>
+        <details>
+          <summary>How can I suggest a new skill?</summary>
+          <p>Use the form above and choose "Suggest a skill" as the topic.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>AllSkills</h3>
+        <p>One platform. Endless skills. Discover, learn and develop practical skills with structured roadmaps.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="skills.html">Explore Skills</a>
+        <a href="articles.html">Articles</a>
+        <a href="pro/pricing.html">AllSkills Pro</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth/login.html">Login</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:info@allskills.com">info@allskills.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; AllSkills. All Rights Reserved.</p>
+      <a href="#top" class="back-top">Back to top</a>
+    </div>
+  </footer>
+
+</body>
+</html>
